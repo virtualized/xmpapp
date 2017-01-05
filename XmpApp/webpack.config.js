@@ -43,6 +43,9 @@ module.exports = {
   resolveLoader: {
     'fallback': path.join(__dirname, 'node_modules')
   },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
   module: {
     loaders: [
       {

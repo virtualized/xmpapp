@@ -1,5 +1,6 @@
 ﻿import React, { Component } from 'react';
 import { Provider } from 'react-redux';
+import TodoApp from './TodoApp';
 import DevTools from './DevTools';
 
 export default class Root extends Component {
@@ -8,6 +9,7 @@ export default class Root extends Component {
     return (
       <Provider store={store}>
         <div>
+          <TodoApp />
           <DevTools />
         </div>
       </Provider>
