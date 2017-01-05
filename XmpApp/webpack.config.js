@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var pkg = require('./package.json');
 
 var vendorPackages = Object.keys(pkg.dependencies).filter(function (el) {
-  return el.indexOf('fone') === -1;
+  return el.indexOf('font') === -1;
 });
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
       'webpack-dev-server/client?http://localhost:3000',
       'webpack/hot/only-dev-server',
       'react-hot-loader/patch',
-      './app/index'
+      './app/index.jsx'
     ],
     vendor: vendorPackages
   },
@@ -46,6 +46,11 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.jsx$/,
+        loaders: ['babel'],
+        exclude: /node_modules/,
+        include: __dirname
+      }, {
         test: /\.js$/,
         loaders: ['babel'],
         exclude: /node_modules/,
