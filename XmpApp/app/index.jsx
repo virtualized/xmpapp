@@ -16,8 +16,9 @@ render(
 if (module.hot) {
   module.hot.accept('./containers/App', () => {
     render(
-      <AppContainer component={require('./containers/App').default}
-      props={{ store }} />,
+      <AppContainer props={{ store }}>
+        require('./containers/App').default
+      </AppContainer>,
       document.getElementById('root')
     );
   });
