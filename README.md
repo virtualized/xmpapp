@@ -1,7 +1,9 @@
-Requirements
+#### Requirements
 
-Node
-npm
+* Node
+* npm
+
+#### VS2015 update 3 - handle ES6 and JSX (not 100% sure this works tbh)
 
 to allow vs 2015 update 3 to handle jsx with es6 correctly, go to:
 
