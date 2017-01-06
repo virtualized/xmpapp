@@ -2,9 +2,10 @@
 	"version": "1.0.0",
 	"name": "xmpapp",
 	"private": true,
-	"scripts": {
-    "start": "webpack-dev-server --config webpack.config.js --hot --progress --colors --devtool source-map"
-	},
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js --hot --progress --colors --devtool source-map",
+    "buildprod": "webpack -p --config webpack.prod.config.js --progress --colors"
+  },
 	"dependencies": {
 		"classnames": "^2.2.5",
 		"isomorphic-fetch": "^2.2.1",
