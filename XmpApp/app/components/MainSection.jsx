@@ -27,6 +27,10 @@ export default class MainSection extends Component {
     }
   }
 
+  handleShow(filter) {
+    this.setState({filter});
+  }
+
   render() {
     const { todos, actions } = this.props;
     const { filter } = this.state;
@@ -43,6 +47,7 @@ export default class MainSection extends Component {
             <TodoItem key={todo.id} todo={todo} {...actions} />
           )}
         </ul>
+        {this.renderFooter(markedCount)}
       </section>
     );
   }
